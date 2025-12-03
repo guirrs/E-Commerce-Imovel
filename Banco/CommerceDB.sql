@@ -1,7 +1,7 @@
-CREATE DATABASE ECommerceImovel;
+CREATE DATABASE ECommerceImovelDB;
 GO
 
-USE ECommerceImovel;
+USE ECommerceImovelDB;
 GO
 
 CREATE TABLE TipoCompra
@@ -112,7 +112,7 @@ INSERT INTO TipoCompra (TipoCompra) VALUES
 ('Compra');
 GO
 
--- TIPO IM”VEL
+-- TIPO IM√ìVEL
 INSERT INTO TipoImovel (TipoImovel) VALUES
 ('Casa'),
 ('Apartamento'),
@@ -121,18 +121,18 @@ INSERT INTO TipoImovel (TipoImovel) VALUES
 ('Estabelecimento');
 GO
 
--- USU¡RIOS
+-- USU√ÅRIOS
 INSERT INTO Usuario (Nome, Telefone, Email, Senha) VALUES
 ('Carlos Souza', '11988887777', 'carlos@email.com', 0x1234),
 ('Maria Lima',  '11977776666', 'maria@email.com', 0x1234),
-('Jo„o Pedro',  '11955554444', 'joao@email.com', 0x1234),
+('Jo√£o Pedro',  '11955554444', 'joao@email.com', 0x1234),
 ('Ana Clara',   '11922221111', 'ana@email.com', 0x1234),
-('Eduardo Reis','11999998888', 'edu@email.com', 0x1234); -- este ter· 2 domicÌlios
+('Eduardo Reis','11999998888', 'edu@email.com', 0x1234); -- este ter√° 2 domic√≠lios
 GO
 
 
 
--- CARACTERÕSTICAS
+-- CARACTER√çSTICAS
 
 INSERT INTO Caracteristica (Ambiente, Mobiliado, Varanda, Churrasqueira, Piscina, Jardim, QuantidadeBanheiros, QuantidadeQuartos)
 VALUES
@@ -144,26 +144,26 @@ VALUES
 GO
 
 
--- DOMICÕLIOS
+-- DOMIC√çLIOS
 
 INSERT INTO Domicilio (CaracteristicaId, Preco, Sobre, Estado, Cidade)
 VALUES
-(1, 550000, 'Casa grande com ·rea de lazer completa.', 'SP', 'S„o Paulo'),
+(1, 550000, 'Casa grande com √°rea de lazer completa.', 'SP', 'S√£o Paulo'),
 (2, 1800,    'Apartamento compacto, ideal para casal.', 'RJ', 'Rio de Janeiro'),
 (3, 3500,    'Sala comercial ampla.', 'MG', 'Belo Horizonte'),
-(4, 1200000, 'Casa de alto padr„o com piscina.', 'SP', 'Campinas'),
+(4, 1200000, 'Casa de alto padr√£o com piscina.', 'SP', 'Campinas'),
 (5, 9000,    'Estabelecimento comercial em avenida movimentada.', 'PR', 'Curitiba');
 GO
 
 
--- RELACIONAMENTOS DOS DOMICÕLIOS
+-- RELACIONAMENTOS DOS DOMIC√çLIOS
 
 -- DomicilioTipoCompra
 INSERT INTO DomicilioTipoCompra VALUES
 (1, 3),  -- casa venda
 (2, 1),  -- ap aluguel
 (3, 3),  -- sala compra
-(4, 3),  -- mans„o compra
+(4, 3),  -- mans√£o compra
 (5, 1);  -- estabelecimento para aluguel
 GO
 
@@ -171,8 +171,8 @@ GO
 INSERT INTO DomicilioTipoImovel VALUES
 (1, 1), -- casa
 (2, 2), -- apartamento
-(3, 3), -- escritÛrio
-(4, 1), -- casa alto padr„o
+(3, 3), -- escrit√≥rio
+(4, 1), -- casa alto padr√£o
 (5, 5); -- estabelecimento
 GO
 
@@ -181,6 +181,6 @@ INSERT INTO DomicilioUsuario VALUES
 (1, 1),
 (2, 2),
 (3, 3),
-(4, 5), -- usu·rio com mais de um domicÌlio
-(5, 5); -- segundo imÛvel do mesmo usu·rio
+(4, 5), -- usu√°rio com mais de um domic√≠lio
+(5, 5); -- segundo im√≥vel do mesmo usu√°rio
 GO
